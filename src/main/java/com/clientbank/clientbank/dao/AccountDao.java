@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Repository
 public class AccountDao implements DAO<Account> {
@@ -61,6 +60,5 @@ public class AccountDao implements DAO<Account> {
   public Account findAccountByNumber(String number) {
     return accounts.stream().filter(account -> account.getNumber().equals(number)).findFirst().orElse(null);
   }
-
 
 }
